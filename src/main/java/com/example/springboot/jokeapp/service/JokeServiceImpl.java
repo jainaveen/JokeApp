@@ -1,5 +1,6 @@
-package com.example.springboot.service;
+package com.example.springboot.jokeapp.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import guru.springframework.norris.chuck.ChuckNorrisQuotes;
@@ -9,9 +10,11 @@ public class JokeServiceImpl implements JokeService {
 
 	private final ChuckNorrisQuotes chuckNorrisQuote;
 
-	public JokeServiceImpl(ChuckNorrisQuotes chuckNorrisQuote) {
+	
+	public JokeServiceImpl() {
 		this.chuckNorrisQuote = new ChuckNorrisQuotes();
 	}
+
 
 	@Override
 	public String getJoke() {
